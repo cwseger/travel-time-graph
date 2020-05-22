@@ -1,0 +1,30 @@
+#locationsFormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+mat-card {
+  width: 300px;
+  background-color: white;
+}
+
+mat-form-field {
+  width: 300px;
+}
+
+img {
+  float: right;
+  width: 100px;
+}
+
+#buttonCard {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+}
+
+button {
+  color: white;
+  background-color: #525B76;
+}

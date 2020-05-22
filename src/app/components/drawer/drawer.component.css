@@ -1,0 +1,18 @@
+#drawerContainer {
+  height: 100vh;
+  background-color: #525B76;
+}
+
+mat-toolbar {
+  background-color: #FFFFF0;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-radio-group {
+  display: flex;
+  flex-direction: column;
+}

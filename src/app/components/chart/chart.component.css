@@ -1,0 +1,4 @@
+#travelInfo {
+  display: flex;
+  justify-content: space-between;
+}

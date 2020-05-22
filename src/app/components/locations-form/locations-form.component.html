@@ -1,0 +1,46 @@
+<div id="locationsFormContainer">
+  <form [formGroup]="locationsForm">
+    <mat-card id="originContainer">
+      <mat-form-field>
+        <input type="text" matInput placeholder="Origin" formControlName="origin" [matAutocomplete]="originAutocomplete" (input)="locationInput('origin')">
+      </mat-form-field>
+
+      <mat-autocomplete #originAutocomplete="matAutocomplete">
+        <mat-option *ngFor="let originPlacePrediction of originPlacePredictions" [value]="originPlacePrediction">
+          {{ originPlacePrediction }}
+        </mat-option>
+      </mat-autocomplete>
+
+      <img src="../assets/powered-by-google/powered_by_google_on_white_hdpi.png" />
+    </mat-card>
+
+    <br>
+    <br>
+
+    <mat-card id="destinationContainer">
+      <mat-form-field>
+        <input type="text" matInput placeholder="Destination" formControlName="destination" [matAutocomplete]="destinationAutocomplete"
+          (input)="locationInput('destination')">
+      </mat-form-field>
+
+      <mat-autocomplete #destinationAutocomplete="matAutocomplete">
+        <mat-option *ngFor="let destinationPlacePrediction of destinationPlacePredictions" [value]="destinationPlacePrediction">
+          {{ destinationPlacePrediction }}
+        </mat-option>
+      </mat-autocomplete>
+
+      <img src="../assets/powered-by-google/powered_by_google_on_white_hdpi.png" />
+    </mat-card>
+  </form>
+  <br>
+  <br>
+
+  <mat-card id="buttonCard">
+    <div id="buttonContainer">
+      <button mat-raised-button (click)="submitForm()">SUBMIT</button>
+    </div>
+  </mat-card>
+
+  <br>
+  <br>
+</div>

@@ -1,0 +1,53 @@
+<div id="drawerContainer">
+  <mat-toolbar>Settings</mat-toolbar>
+  <br>
+  <br>
+  <mat-card>
+    <mat-card-title>Time Increment</mat-card-title>
+    <mat-radio-group [(ngModel)]="settingsService.settings.timeIncrement">
+      <mat-radio-button *ngFor="let option of settingsService.options.timeIncrementOptions" [value]="option.timeInSeconds">
+        {{option.name}}
+      </mat-radio-button>
+    </mat-radio-group>
+  </mat-card>
+  <br>
+  <br>
+  <mat-card>
+    <mat-card-title>Time Range</mat-card-title>
+    <mat-radio-group [(ngModel)]="settingsService.settings.timeRange">
+      <mat-radio-button *ngFor="let option of settingsService.options.timeRangeOptions" [value]="option.rangeInSeconds">
+        {{option.name}}
+      </mat-radio-button>
+    </mat-radio-group>
+  </mat-card>
+  <br>
+  <br>
+  <mat-card>
+    <mat-card-title>Traffic Model</mat-card-title>
+    <mat-radio-group [(ngModel)]="settingsService.settings.trafficModel">
+      <mat-radio-button *ngFor="let option of settingsService.options.trafficModelOptions" [value]="option.trafficModel">
+        {{option.name}}
+      </mat-radio-button>
+    </mat-radio-group>
+  </mat-card>
+  <br>
+  <br>
+  <mat-card>
+    <mat-card-title>Travel Mode</mat-card-title>
+    <mat-radio-group [(ngModel)]="settingsService.settings.travelMode">
+      <mat-radio-button *ngFor="let option of settingsService.options.travelModeOptions" [value]="option.travelMode">
+        {{option.name}}
+      </mat-radio-button>
+    </mat-radio-group>
+  </mat-card>
+  <br>
+  <br>
+  <mat-card>
+    <mat-card-title>Unit System</mat-card-title>
+    <mat-radio-group [(ngModel)]="settingsService.settings.unitSystem">
+      <mat-radio-button *ngFor="let option of settingsService.options.unitSystemOptions" [value]="option.unitSystem">
+        {{option.name}}
+      </mat-radio-button>
+    </mat-radio-group>
+  </mat-card>
+</div>
